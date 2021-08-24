@@ -1,0 +1,501 @@
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:24:17.46][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a2393a66] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[WARN][][2021-08-23 20:24:18.794][base-microservice][org.springframework.context.support.AbstractApplicationContext:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'textEncryptor' defined in class path resource [org/springframework/cloud/bootstrap/encrypt/EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+[INFO][][2021-08-23 20:24:18.799][base-microservice][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:142] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[ERROR][][2021-08-23 20:24:18.804][base-microservice][org.springframework.boot.SpringApplication:858] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'textEncryptor' defined in class path resource [org/springframework/cloud/bootstrap/encrypt/EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:203)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:71)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at net.occp.base.BaseMicroserviceApplication.main(BaseMicroserviceApplication.java:14)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 30 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:76)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.textEncryptor(EncryptionBootstrapConfiguration.java:85)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$33f59351.CGLIB$textEncryptor$0(<generated>)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$33f59351$$FastClassBySpringCGLIB$$4518bc1b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$33f59351.textEncryptor(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 31 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineLoad(PKCS12KeyStore.java:2117)
+	at java.base/sun.security.util.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:243)
+	at java.base/java.security.KeyStore.load(KeyStore.java:1479)
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:65)
+	... 42 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	... 46 common frames omitted
+[ERROR][][2021-08-23 20:24:18.806][base-microservice][org.springframework.boot.SpringApplication:858] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'textEncryptor' defined in class path resource [org/springframework/cloud/bootstrap/encrypt/EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:203)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:71)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at net.occp.base.BaseMicroserviceApplication.main(BaseMicroserviceApplication.java:14)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 30 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:76)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.textEncryptor(EncryptionBootstrapConfiguration.java:85)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$33f59351.CGLIB$textEncryptor$0(<generated>)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$33f59351$$FastClassBySpringCGLIB$$4518bc1b.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$33f59351.textEncryptor(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 31 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineLoad(PKCS12KeyStore.java:2117)
+	at java.base/sun.security.util.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:243)
+	at java.base/java.security.KeyStore.load(KeyStore.java:1479)
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:65)
+	... 42 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	... 46 common frames omitted
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:30:32.433][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$70aa0c27] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[WARN][][2021-08-23 20:30:33.397][base-microservice][org.springframework.context.support.AbstractApplicationContext:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'textEncryptor' defined in class path resource [org/springframework/cloud/bootstrap/encrypt/EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+[INFO][][2021-08-23 20:30:33.402][base-microservice][org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLoggingListener:142] - 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+[ERROR][][2021-08-23 20:30:33.406][base-microservice][org.springframework.boot.SpringApplication:858] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'textEncryptor' defined in class path resource [org/springframework/cloud/bootstrap/encrypt/EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:203)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:71)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at net.occp.base.BaseMicroserviceApplication.main(BaseMicroserviceApplication.java:14)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 30 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:76)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.textEncryptor(EncryptionBootstrapConfiguration.java:85)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$2666512.CGLIB$textEncryptor$0(<generated>)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$2666512$$FastClassBySpringCGLIB$$11df6a5c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$2666512.textEncryptor(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 31 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineLoad(PKCS12KeyStore.java:2117)
+	at java.base/sun.security.util.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:243)
+	at java.base/java.security.KeyStore.load(KeyStore.java:1479)
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:65)
+	... 42 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	... 46 common frames omitted
+[ERROR][][2021-08-23 20:30:33.409][base-microservice][org.springframework.boot.SpringApplication:858] - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'textEncryptor' defined in class path resource [org/springframework/cloud/bootstrap/encrypt/EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:627)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:456)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1321)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1160)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:555)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:843)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
+	at org.springframework.boot.builder.SpringApplicationBuilder.run(SpringApplicationBuilder.java:139)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.bootstrapServiceContext(BootstrapApplicationListener.java:203)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:114)
+	at org.springframework.cloud.bootstrap.BootstrapApplicationListener.onApplicationEvent(BootstrapApplicationListener.java:71)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.doInvokeListener(SimpleApplicationEventMulticaster.java:172)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.invokeListener(SimpleApplicationEventMulticaster.java:165)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:139)
+	at org.springframework.context.event.SimpleApplicationEventMulticaster.multicastEvent(SimpleApplicationEventMulticaster.java:127)
+	at org.springframework.boot.context.event.EventPublishingRunListener.environmentPrepared(EventPublishingRunListener.java:75)
+	at org.springframework.boot.SpringApplicationRunListeners.environmentPrepared(SpringApplicationRunListeners.java:54)
+	at org.springframework.boot.SpringApplication.prepareEnvironment(SpringApplication.java:347)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:306)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
+	at net.occp.base.BaseMicroserviceApplication.main(BaseMicroserviceApplication.java:14)
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.security.crypto.encrypt.TextEncryptor]: Factory method 'textEncryptor' threw exception; nested exception is java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:185)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:622)
+	... 30 common frames omitted
+Caused by: java.lang.IllegalStateException: Cannot load keys from store: class path resource [keystore.jks]
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:76)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration.textEncryptor(EncryptionBootstrapConfiguration.java:85)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$2666512.CGLIB$textEncryptor$0(<generated>)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$2666512$$FastClassBySpringCGLIB$$11df6a5c.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:244)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:363)
+	at org.springframework.cloud.bootstrap.encrypt.EncryptionBootstrapConfiguration$RsaEncryptionConfiguration$$EnhancerBySpringCGLIB$$2666512.textEncryptor(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:154)
+	... 31 common frames omitted
+Caused by: java.io.IOException: keystore password was incorrect
+	at java.base/sun.security.pkcs12.PKCS12KeyStore.engineLoad(PKCS12KeyStore.java:2117)
+	at java.base/sun.security.util.KeyStoreDelegator.engineLoad(KeyStoreDelegator.java:243)
+	at java.base/java.security.KeyStore.load(KeyStore.java:1479)
+	at org.springframework.security.rsa.crypto.KeyStoreKeyFactory.getKeyPair(KeyStoreKeyFactory.java:65)
+	... 42 common frames omitted
+Caused by: java.security.UnrecoverableKeyException: failed to decrypt safe contents entry: javax.crypto.BadPaddingException: Given final block not properly padded. Such issues can arise if a bad key is used during decryption.
+	... 46 common frames omitted
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:33:45.461][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$daaed2fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:33:47.359][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-23 20:33:50.785][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=base-microservice, profiles=[local], label=null, version=c84599d48527700020427c3e21f057f29a4c3204, state=null
+[INFO][][2021-08-23 20:33:50.786][base-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/base-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:33:50.929][base-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-23 20:33:52.541][base-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-23 20:33:52.941][base-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=f2d9a366-4208-337a-aa4e-5ba6757e321e
+[INFO][][2021-08-23 20:33:53.323][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$daaed2fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-23 20:33:53.760][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3341 (http)
+[INFO][][2021-08-23 20:33:53.788][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-23 20:33:53.788][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-23 20:33:54.03][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-23 20:33:54.04][base-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 3058 ms
+[WARN][][2021-08-23 20:33:54.226][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 20:33:54.227][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 20:33:54.300][base-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@32ba5c65
+[INFO][][2021-08-23 20:33:55.745][base-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: 0d4b9d88-7be7-4ef9-aeac-a80e4219b5ee
+
+[INFO][][2021-08-23 20:33:55.848][base-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2cc97e47, org.springframework.security.web.context.SecurityContextPersistenceFilter@e4ef4c0, org.springframework.security.web.header.HeaderWriterFilter@1cfa7ee0, org.springframework.security.web.authentication.logout.LogoutFilter@1b9c716f, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7b8fcdf2, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@13f182b9, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@2b19b346, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@74a03bd5, org.springframework.security.web.session.SessionManagementFilter@7ebfe01a, org.springframework.security.web.access.ExceptionTranslationFilter@2fccf49e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@52a74328]
+[WARN][][2021-08-23 20:33:55.869][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 20:33:55.870][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 20:33:56.164][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 20:33:56.883][base-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-23 20:33:58.172][base-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-23 20:33:58.310][base-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-23 20:33:58.312][base-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-23 20:33:58.431][base-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629772438429 with initial instances count: 0
+[INFO][][2021-08-23 20:33:58.442][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application BASE-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-23 20:33:58.508][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3341 (http) with context path '/base-microservice'
+[INFO][][2021-08-23 20:33:58.510][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3341
+[INFO][][2021-08-23 20:33:58.520][base-microservice][org.springframework.boot.StartupInfoLogger:59] - Started BaseMicroserviceApplication in 14.13 seconds (JVM running for 14.552)
+[INFO][][2021-08-23 20:34:42.123][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO][][2021-08-23 20:34:42.124][base-microservice][org.springframework.web.servlet.FrameworkServlet:524] - Initializing Servlet 'dispatcherServlet'
+[INFO][][2021-08-23 20:34:42.146][base-microservice][org.springframework.web.servlet.FrameworkServlet:546] - Completed initialization in 21 ms
+[INFO][][2021-08-23 20:34:43.774][base-microservice][com.netflix.config.ChainedDynamicProperty$ChainLink:115] - Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO][][2021-08-23 20:34:43.835][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 20:34:43.836][base-microservice][com.netflix.loadbalancer.BaseLoadBalancer:197] - Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO][][2021-08-23 20:34:43.845][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222] - Using serverListUpdater PollingServerListUpdater
+[INFO][][2021-08-23 20:34:43.851][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150] - DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@12cb864e
+[INFO][][2021-08-23 20:35:38.401][base-microservice][com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53] - Shutting down the Executor Pool for PollingServerListUpdater
+[INFO][][2021-08-23 20:35:38.401][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application BASE-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-23 20:35:38.465][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 20:35:38.903][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 20:35:38.906][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:72] - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:244)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+[INFO][][2021-08-23 20:35:38.912][base-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-23 20:35:38.912][base-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:35:45.156][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d50aa17b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:35:45.889][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-23 20:35:46.998][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=base-microservice, profiles=[local], label=null, version=c84599d48527700020427c3e21f057f29a4c3204, state=null
+[INFO][][2021-08-23 20:35:46.999][base-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/base-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:35:47.82][base-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-23 20:35:47.944][base-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-23 20:35:48.379][base-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=f2d9a366-4208-337a-aa4e-5ba6757e321e
+[INFO][][2021-08-23 20:35:48.669][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$d50aa17b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-23 20:35:49.102][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3341 (http)
+[INFO][][2021-08-23 20:35:49.137][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-23 20:35:49.138][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-23 20:35:49.296][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-23 20:35:49.297][base-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 2198 ms
+[WARN][][2021-08-23 20:35:49.461][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 20:35:49.461][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 20:35:49.473][base-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@3e9fb485
+[INFO][][2021-08-23 20:35:50.799][base-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: 12f9e0be-5a34-4b5c-be98-89761837545b
+
+[INFO][][2021-08-23 20:35:50.911][base-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@7b10472e, org.springframework.security.web.context.SecurityContextPersistenceFilter@22f046b, org.springframework.security.web.header.HeaderWriterFilter@6032622, org.springframework.security.web.authentication.logout.LogoutFilter@22bfd4b, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@4ca4f762, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1ed12d10, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1acc768, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@70e5737f, org.springframework.security.web.session.SessionManagementFilter@684a802a, org.springframework.security.web.access.ExceptionTranslationFilter@17d19538, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5340ccb9]
+[WARN][][2021-08-23 20:35:50.932][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 20:35:50.933][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 20:35:51.109][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 20:35:51.740][base-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-23 20:35:52.241][base-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-23 20:35:52.272][base-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-23 20:35:52.274][base-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-23 20:35:52.393][base-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629772552282 with initial instances count: 0
+[INFO][][2021-08-23 20:35:52.402][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application BASE-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-23 20:35:52.443][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3341 (http) with context path '/base-microservice'
+[INFO][][2021-08-23 20:35:52.444][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3341
+[INFO][][2021-08-23 20:35:52.448][base-microservice][org.springframework.boot.StartupInfoLogger:59] - Started BaseMicroserviceApplication in 8.539 seconds (JVM running for 8.946)
+[INFO][][2021-08-23 20:36:23.431][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO][][2021-08-23 20:36:23.489][base-microservice][org.springframework.web.servlet.FrameworkServlet:524] - Initializing Servlet 'dispatcherServlet'
+[INFO][][2021-08-23 20:36:23.506][base-microservice][org.springframework.web.servlet.FrameworkServlet:546] - Completed initialization in 17 ms
+[INFO][][2021-08-23 20:36:23.631][base-microservice][net.occp.base.controller.BaseController:21] - hi
+[INFO][][2021-08-23 20:36:25.59][base-microservice][com.netflix.config.ChainedDynamicProperty$ChainLink:115] - Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO][][2021-08-23 20:36:25.486][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 20:36:25.486][base-microservice][com.netflix.loadbalancer.BaseLoadBalancer:197] - Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO][][2021-08-23 20:36:25.494][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222] - Using serverListUpdater PollingServerListUpdater
+[INFO][][2021-08-23 20:36:25.500][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150] - DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@23882d76
+[INFO][][2021-08-23 20:36:55.264][base-microservice][com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53] - Shutting down the Executor Pool for PollingServerListUpdater
+[INFO][][2021-08-23 20:36:55.265][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application BASE-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-23 20:36:55.276][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 20:36:55.541][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 20:36:55.544][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:72] - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:244)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+[INFO][][2021-08-23 20:36:55.550][base-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-23 20:36:55.550][base-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:37:03.487][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$28fbce9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:37:04.245][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-23 20:37:05.399][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=base-microservice, profiles=[local], label=null, version=c84599d48527700020427c3e21f057f29a4c3204, state=null
+[INFO][][2021-08-23 20:37:05.400][base-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/base-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 20:37:05.495][base-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-23 20:37:06.349][base-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-23 20:37:06.743][base-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=f2d9a366-4208-337a-aa4e-5ba6757e321e
+[INFO][][2021-08-23 20:37:06.995][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$28fbce9a] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-23 20:37:07.336][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3341 (http)
+[INFO][][2021-08-23 20:37:07.367][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-23 20:37:07.368][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-23 20:37:07.533][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-23 20:37:07.534][base-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 2018 ms
+[WARN][][2021-08-23 20:37:07.724][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 20:37:07.725][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 20:37:07.738][base-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@4d825dbe
+[INFO][][2021-08-23 20:37:09.192][base-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: a2308967-b9dc-4dd4-9452-644179e56d7f
+
+[INFO][][2021-08-23 20:37:09.308][base-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@788a0513, org.springframework.security.web.context.SecurityContextPersistenceFilter@215c6ec0, org.springframework.security.web.header.HeaderWriterFilter@7b10472e, org.springframework.security.web.authentication.logout.LogoutFilter@538f45f1, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@7c8b37a8, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@43b45ce4, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@bea283b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@d65e744, org.springframework.security.web.session.SessionManagementFilter@46748b04, org.springframework.security.web.access.ExceptionTranslationFilter@35c00c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@c29b0dc]
+[WARN][][2021-08-23 20:37:09.330][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 20:37:09.330][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 20:37:09.521][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 20:37:10.145][base-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-23 20:37:10.605][base-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-23 20:37:10.636][base-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-23 20:37:10.637][base-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-23 20:37:10.646][base-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629772630645 with initial instances count: 0
+[INFO][][2021-08-23 20:37:10.656][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application BASE-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-23 20:37:10.707][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3341 (http) with context path '/base-microservice'
+[INFO][][2021-08-23 20:37:10.708][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3341
+[INFO][][2021-08-23 20:37:10.711][base-microservice][org.springframework.boot.StartupInfoLogger:59] - Started BaseMicroserviceApplication in 8.444 seconds (JVM running for 9.204)
+[INFO][][2021-08-23 20:38:07.185][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO][][2021-08-23 20:38:07.186][base-microservice][org.springframework.web.servlet.FrameworkServlet:524] - Initializing Servlet 'dispatcherServlet'
+[INFO][][2021-08-23 20:38:07.205][base-microservice][org.springframework.web.servlet.FrameworkServlet:546] - Completed initialization in 19 ms
+[INFO][][2021-08-23 20:38:07.258][base-microservice][net.occp.base.controller.BaseController:21] - Prueba de conectividad
+[INFO][][2021-08-23 20:38:08.363][base-microservice][com.netflix.config.ChainedDynamicProperty$ChainLink:115] - Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO][][2021-08-23 20:38:08.395][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 20:38:08.396][base-microservice][com.netflix.loadbalancer.BaseLoadBalancer:197] - Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO][][2021-08-23 20:38:08.402][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222] - Using serverListUpdater PollingServerListUpdater
+[INFO][][2021-08-23 20:38:08.407][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150] - DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@5d636816
+[INFO][][2021-08-23 20:38:18.624][base-microservice][net.occp.base.controller.BaseController:21] - Prueba de conectividad
+[INFO][][2021-08-23 20:38:19.263][base-microservice][net.occp.base.controller.BaseController:21] - Prueba de conectividad
+[INFO][][2021-08-23 20:38:19.794][base-microservice][net.occp.base.controller.BaseController:21] - Prueba de conectividad
+[INFO][][2021-08-23 20:38:20.276][base-microservice][net.occp.base.controller.BaseController:21] - Prueba de conectividad
+[INFO][][2021-08-23 20:38:32.28][base-microservice][com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53] - Shutting down the Executor Pool for PollingServerListUpdater
+[INFO][][2021-08-23 20:38:32.29][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application BASE-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-23 20:38:32.35][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 20:38:32.439][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 20:38:32.441][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:72] - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:244)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+[INFO][][2021-08-23 20:38:32.445][base-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-23 20:38:32.446][base-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n

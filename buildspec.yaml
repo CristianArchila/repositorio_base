@@ -1,0 +1,39 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk11
+    commands:
+    - apt-get update -y
+    - apt-get install -y maven
+  pre_build:
+    commands:
+    - echo Logging in to Amazon ECR...
+    - aws --version
+    - $(aws ecr get-login --region $region --no-include-email)
+    - TAG=$(grep -oPm1 "(?<=<version>)[^<]+" pom.xml)
+    - echo The TAG is $TAG
+    - IMAGE_URI=${repository_url}:${TAG}
+    - IMAGE_URI_LATEST=${repository_url}:latest
+  build:
+    commands:
+    - echo Build started on `date`
+    - echo $IMAGE_URI
+    - echo $IMAGE_URI_LATEST
+    - mvn clean package -Ddockerfile.skip
+    - docker build --tag $IMAGE_URI .
+    - docker build --tag $IMAGE_URI_LATEST .
+  post_build:
+    commands:
+    - printenv
+    - echo Build completed on `date`
+    - echo $(docker images)
+    - echo Pushing docker image
+    - docker push $IMAGE_URI
+    - docker push $IMAGE_URI_LATEST
+    - echo push completed
+    - printf '[{"name":"%s","imageUri":"%s"}]' $container_name $IMAGE_URI > imagedefinitions.json
+artifacts:
+  files:
+  - imagedefinitions.json

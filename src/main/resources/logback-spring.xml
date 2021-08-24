@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan = "true" scanPeriod = "30 seconds">
+    <include resource = "org/springframework/boot/logging/logback/base.xml"/>
+
+    <property name = "PATH" value = "logs/"/>
+    <property name = "SINGLE_FILE" value = "base-microservice.log"/>
+    <property name = "CURRENT_FILE" value = "base-microservice.current.log"/>
+    <property name = "ROLLING_FILE" value = "base-microservice.%d{yyyyMMdd}.log"/>
+    <property name = "CONSOLE_LOG_PATTERN" value = "[%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n" />
+
+    <appender name = "console-appender" class = "ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name = "file-appender" class = "ch.qos.logback.core.FileAppender">
+        <file>${PATH}/${SINGLE_FILE}</file>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <outputPatternAsHeader>true</outputPatternAsHeader>
+        </encoder>
+    </appender>
+
+    <appender name = "rolling-file-appender" class = "ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${PATH}/${CURRENT_FILE}</file>
+        <encoder>
+            <pattern>${CONSOLE_LOG_PATTERN}</pattern>
+            <outputPatternAsHeader>true</outputPatternAsHeader>
+        </encoder>
+        <rollingPolicy class = "ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>${PATH}/${ROLLING_FILE}</fileNamePattern>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>1MB</totalSizeCap>
+        </rollingPolicy>
+    </appender>
+
+    <appender name = "logstash-appender" class = "net.logstash.logback.appender.LogstashTcpSocketAppender">
+        <destination>localhost:5000</destination>
+        <encoder class = "net.logstash.logback.encoder.LoggingEventCompositeJsonEncoder">
+            <providers>
+                <arguments/>
+                <context/>
+                <loggerName/>
+                <logLevel/>
+                <logstashMarkers/>
+                <mdc/>
+                <message/>
+                <stackTrace/>
+                <threadName/>
+                <version/>
+            </providers>
+        </encoder>
+    </appender>
+
+    <root level = "info">
+        <appender-ref ref = "rolling-file-appender"/>
+        <appender-ref ref = "logstash-appender"/>
+    </root>
+</configuration>

@@ -1,0 +1,161 @@
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 07:16:26.864][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ee05a82b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 07:16:27.514][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-24 07:16:29.849][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=base-microservice, profiles=[local], label=null, version=c84599d48527700020427c3e21f057f29a4c3204, state=null
+[INFO][][2021-08-24 07:16:29.850][base-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/base-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 07:16:30.101][base-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-24 07:16:31.427][base-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-24 07:16:32.16][base-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=f2d9a366-4208-337a-aa4e-5ba6757e321e
+[INFO][][2021-08-24 07:16:32.288][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$ee05a82b] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-24 07:16:32.725][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3341 (http)
+[INFO][][2021-08-24 07:16:32.758][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-24 07:16:32.759][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-24 07:16:32.977][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-24 07:16:32.978][base-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 2797 ms
+[WARN][][2021-08-24 07:16:33.169][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-24 07:16:33.170][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-24 07:16:33.201][base-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@20890a1a
+[INFO][][2021-08-24 07:16:34.870][base-microservice][org.springframework.cloud.commons.util.InetUtils:170] - Cannot determine local hostname
+[INFO][][2021-08-24 07:16:35.827][base-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: f25a9af5-f9c5-41dd-bc98-f5442ee1d2ac
+
+[INFO][][2021-08-24 07:16:35.948][base-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@2d3111a1, org.springframework.security.web.context.SecurityContextPersistenceFilter@33e4068, org.springframework.security.web.header.HeaderWriterFilter@683ed81b, org.springframework.security.web.authentication.logout.LogoutFilter@64ef2719, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@39ac8c0c, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@1aa31454, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4eb48298, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@6f2864c3, org.springframework.security.web.session.SessionManagementFilter@3a589eed, org.springframework.security.web.access.ExceptionTranslationFilter@504c415c, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@5ea0a7a9]
+[WARN][][2021-08-24 07:16:35.970][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-24 07:16:35.971][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-24 07:16:36.214][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-24 07:16:36.988][base-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-24 07:16:37.855][base-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-24 07:16:37.915][base-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-24 07:16:37.929][base-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-24 07:16:37.954][base-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629810997943 with initial instances count: 0
+[INFO][][2021-08-24 07:16:37.964][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application BASE-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-24 07:16:38.24][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3341 (http) with context path '/base-microservice'
+[INFO][][2021-08-24 07:16:38.25][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3341
+[INFO][][2021-08-24 07:16:38.29][base-microservice][org.springframework.boot.StartupInfoLogger:59] - Started BaseMicroserviceApplication in 12.747 seconds (JVM running for 13.236)
+[INFO][][2021-08-24 07:20:14.119][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO][][2021-08-24 07:20:14.138][base-microservice][org.springframework.web.servlet.FrameworkServlet:524] - Initializing Servlet 'dispatcherServlet'
+[INFO][][2021-08-24 07:20:14.161][base-microservice][org.springframework.web.servlet.FrameworkServlet:546] - Completed initialization in 22 ms
+[INFO][][2021-08-24 07:20:15.874][base-microservice][com.netflix.config.ChainedDynamicProperty$ChainLink:115] - Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO][][2021-08-24 07:20:15.913][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-24 07:20:15.914][base-microservice][com.netflix.loadbalancer.BaseLoadBalancer:197] - Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO][][2021-08-24 07:20:15.922][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222] - Using serverListUpdater PollingServerListUpdater
+[INFO][][2021-08-24 07:20:15.926][base-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150] - DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@79080c4c
+[INFO][][2021-08-24 07:20:18.374][base-microservice][net.occp.base.controller.BaseController:21] - Prueba de conectividad
+[INFO][][2021-08-24 07:21:58.997][base-microservice][com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53] - Shutting down the Executor Pool for PollingServerListUpdater
+[INFO][][2021-08-24 07:21:58.997][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application BASE-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-24 07:21:59.40][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-24 07:21:59.982][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-24 07:22:00.682][base-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:72] - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:244)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+[INFO][][2021-08-24 07:22:00.737][base-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-24 07:22:00.739][base-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 08:17:46.931][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a2fc56dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 08:17:47.989][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-24 08:17:49.598][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=base-microservice, profiles=[local], label=null, version=c84599d48527700020427c3e21f057f29a4c3204, state=null
+[INFO][][2021-08-24 08:17:49.599][base-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/base-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 08:17:49.920][base-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-24 08:17:50.876][base-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-24 08:17:51.275][base-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=1c405166-5df8-388c-bba2-1e85f630dd65
+[INFO][][2021-08-24 08:17:51.541][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a2fc56dd] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-24 08:17:51.928][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3341 (http)
+[INFO][][2021-08-24 08:17:51.962][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-24 08:17:51.963][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-24 08:17:52.126][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-24 08:17:52.127][base-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 2190 ms
+[WARN][][2021-08-24 08:17:52.313][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-24 08:17:52.314][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-24 08:17:52.330][base-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@131ba005
+[INFO][][2021-08-24 08:17:53.634][base-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: 2809dc5c-8170-4353-b10c-a679f556a09c
+
+[INFO][][2021-08-24 08:17:53.769][base-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@4a2653a0, org.springframework.security.web.context.SecurityContextPersistenceFilter@24954e82, org.springframework.security.web.header.HeaderWriterFilter@22f80e36, org.springframework.security.web.authentication.logout.LogoutFilter@e60c5a, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@559c4e06, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@53e166ad, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4a3509b0, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@784212, org.springframework.security.web.session.SessionManagementFilter@674e4c82, org.springframework.security.web.access.ExceptionTranslationFilter@51297528, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@303fbc4]
+[WARN][][2021-08-24 08:17:53.792][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-24 08:17:53.793][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-24 08:17:54.390][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-24 08:17:54.993][base-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-24 08:17:56.303][base-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-24 08:17:56.357][base-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-24 08:17:56.358][base-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-24 08:17:56.423][base-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629814676373 with initial instances count: 0
+[INFO][][2021-08-24 08:17:56.438][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application BASE-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-24 08:17:56.496][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3341 (http) with context path '/base-microservice'
+[INFO][][2021-08-24 08:17:56.497][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3341
+[INFO][][2021-08-24 08:17:56.501][base-microservice][org.springframework.boot.StartupInfoLogger:59] - Started BaseMicroserviceApplication in 11.019 seconds (JVM running for 11.474)
+[INFO][][2021-08-24 08:18:06.469][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application BASE-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-24 08:18:06.476][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[WARN][][2021-08-24 08:18:06.662][base-microservice][org.springframework.context.support.AbstractApplicationContext:557] - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eurekaRibbonClientConfiguration': Unsatisfied dependency expressed through field 'eurekaConfig'; nested exception is org.springframework.beans.factory.BeanCreationNotAllowedException: Error creating bean with name 'eurekaInstanceConfigBean': Singleton bean creation not allowed while singletons of this factory are in destruction (Do not request a bean from a BeanFactory in a destroy method implementation!)
+[INFO][][2021-08-24 08:18:06.666][base-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-24 08:18:06.667][base-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 08:21:35.906][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3617e37c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 08:21:36.564][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-24 08:21:37.798][base-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=base-microservice, profiles=[local], label=null, version=c84599d48527700020427c3e21f057f29a4c3204, state=null
+[INFO][][2021-08-24 08:21:37.799][base-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/base-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][base-microservice][%C:%L] - %m%n
+[INFO][][2021-08-24 08:21:37.954][base-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-24 08:21:39.201][base-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-24 08:21:39.625][base-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=1c405166-5df8-388c-bba2-1e85f630dd65
+[INFO][][2021-08-24 08:21:39.911][base-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3617e37c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-24 08:21:40.380][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3341 (http)
+[INFO][][2021-08-24 08:21:40.409][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-24 08:21:40.409][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-24 08:21:40.585][base-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-24 08:21:40.585][base-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 2449 ms
+[WARN][][2021-08-24 08:21:40.812][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-24 08:21:40.813][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-24 08:21:40.834][base-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@7ba06506
+[INFO][][2021-08-24 08:21:42.467][base-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: 18e5d2cf-4b9c-40f8-9606-f48718d39f50
+
+[INFO][][2021-08-24 08:21:42.710][base-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@b90c5a5, org.springframework.security.web.context.SecurityContextPersistenceFilter@437c1a87, org.springframework.security.web.header.HeaderWriterFilter@aa23f11, org.springframework.security.web.authentication.logout.LogoutFilter@3636f2a7, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@467a2584, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@50734cea, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@5909285b, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@1786150f, org.springframework.security.web.session.SessionManagementFilter@3adde4ea, org.springframework.security.web.access.ExceptionTranslationFilter@3e595da3, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@24955144]
+[WARN][][2021-08-24 08:21:42.744][base-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-24 08:21:42.744][base-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-24 08:21:43.262][base-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-24 08:21:43.732][base-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-24 08:21:44.909][base-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-24 08:21:44.970][base-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-24 08:21:44.972][base-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-24 08:21:44.985][base-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629814904982 with initial instances count: 0
+[INFO][][2021-08-24 08:21:44.995][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application BASE-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-24 08:21:45.52][base-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3341 (http) with context path '/base-microservice'
+[INFO][][2021-08-24 08:21:45.53][base-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3341
+[INFO][][2021-08-24 08:21:45.64][base-microservice][org.springframework.boot.StartupInfoLogger:59] - Started BaseMicroserviceApplication in 10.571 seconds (JVM running for 10.973)

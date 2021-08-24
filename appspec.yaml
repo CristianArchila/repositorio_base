@@ -1,0 +1,10 @@
+version: 1.0
+Resources:
+  - TargetService:
+      Type: AWS::ECS::Service
+      Properties:
+        LoadBalancerInfo:
+          ContainerName: "mss"
+          ContainerPort: "8080"
+        PlatformVersion: "LATEST"
+

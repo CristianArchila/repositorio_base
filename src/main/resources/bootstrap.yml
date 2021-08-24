@@ -1,0 +1,31 @@
+## BOOTSTRAP CONFIGURATION
+---
+spring:
+  application:
+    name: base-microservice
+
+  cloud:
+    config:
+      failFast: true
+      uri: http://${CONFIG_SERVER_DOMAIN:localhost}:${CONFIG_SERVER_PORT:8888}/config-server
+      password: ${CONFIG_SERVER_PASSWORD}
+      username: ${CONFIG_SERVER_USER}
+  profiles:
+    active: ${ACTIVE_PROFILE:local}
+    
+encrypt:
+  keyStore:
+    location: ${KEY_STORE_LOCATION:classpath:keystore.jks}
+    alias: ${KEY_STORE_ALIAS:configuration}    
+    password: ${KEY_STORE_PASSWORD:password}    
+    secret: ${KEY_STORE_SECRET:secret}
+    
+springdoc:
+    version: '@springdoc.version@'
+    swagger-ui:
+        use-root-path: true
+        path: '/swagger-ui/index.html'
+        url: '/base-microservice/v3/api/swagger.json'
+        disable-swagger-default-url: true
+    api-docs:
+        path: /v3/api/swagger.json

@@ -1,0 +1,395 @@
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:37:51.653][support-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3cbeb983] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:37:53.820][support-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-23 07:37:55.48][support-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=support-microservice, profiles=[local], label=null, version=f6e7f5a3f5e17a018a13c4b3d6ee60e39c08e541, state=null
+[INFO][][2021-08-23 07:37:55.49][support-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/support-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:37:55.129][support-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-23 07:37:57.622][support-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-23 07:37:58.43][support-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=bd42288e-cac4-30c9-9afc-400d0072f179
+[INFO][][2021-08-23 07:37:58.290][support-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$3cbeb983] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-23 07:37:58.630][support-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3347 (http)
+[INFO][][2021-08-23 07:37:58.658][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-23 07:37:58.658][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-23 07:37:58.825][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-23 07:37:58.825][support-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 3682 ms
+[WARN][][2021-08-23 07:37:58.981][support-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 07:37:58.982][support-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 07:37:58.994][support-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@789dd6bf
+[INFO][][2021-08-23 07:38:00.915][support-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: 9cf0dec4-e4e8-436c-893d-0a3042deb90a
+
+[INFO][][2021-08-23 07:38:01.15][support-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@e5c52fa, org.springframework.security.web.context.SecurityContextPersistenceFilter@2651e783, org.springframework.security.web.header.HeaderWriterFilter@239d9cb7, org.springframework.security.web.authentication.logout.LogoutFilter@471a9e8c, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@60e80279, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@7b58d678, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@3e0704e2, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@614361fa, org.springframework.security.web.session.SessionManagementFilter@19fc0ef7, org.springframework.security.web.access.ExceptionTranslationFilter@15fe020d, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@34626d4]
+[WARN][][2021-08-23 07:38:01.36][support-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 07:38:01.37][support-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 07:38:01.311][support-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 07:38:01.983][support-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-23 07:38:02.403][support-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-23 07:38:02.435][support-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-23 07:38:02.437][support-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-23 07:38:02.446][support-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629725882445 with initial instances count: 0
+[INFO][][2021-08-23 07:38:02.456][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application SUPPORT-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-23 07:38:02.494][support-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3347 (http) with context path '/support-microservice'
+[INFO][][2021-08-23 07:38:02.494][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3347
+[INFO][][2021-08-23 07:38:02.497][support-microservice][org.springframework.boot.StartupInfoLogger:59] - Started SupportMicroserviceApplication in 12.336 seconds (JVM running for 12.757)
+[INFO][][2021-08-23 07:38:19.352][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO][][2021-08-23 07:38:19.354][support-microservice][org.springframework.web.servlet.FrameworkServlet:524] - Initializing Servlet 'dispatcherServlet'
+[INFO][][2021-08-23 07:38:19.371][support-microservice][org.springframework.web.servlet.FrameworkServlet:546] - Completed initialization in 17 ms
+[INFO][][2021-08-23 07:38:20.601][support-microservice][org.springdoc.api.AbstractOpenApiResource:301] - Init duration for springdoc-openapi is: 395 ms
+[INFO][][2021-08-23 07:38:21.105][support-microservice][com.netflix.config.ChainedDynamicProperty$ChainLink:115] - Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO][][2021-08-23 07:38:21.154][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 07:38:21.155][support-microservice][com.netflix.loadbalancer.BaseLoadBalancer:197] - Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO][][2021-08-23 07:38:21.164][support-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222] - Using serverListUpdater PollingServerListUpdater
+[INFO][][2021-08-23 07:38:21.170][support-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150] - DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@7dd58e31
+[INFO][][2021-08-23 07:39:57.482][support-microservice][com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53] - Shutting down the Executor Pool for PollingServerListUpdater
+[INFO][][2021-08-23 07:39:57.482][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application SUPPORT-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-23 07:39:57.487][support-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 07:39:58.237][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 07:39:58.252][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:72] - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:244)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+[INFO][][2021-08-23 07:39:58.268][support-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-23 07:39:58.269][support-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:40:13.410][support-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a2436d01] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:40:14.985][support-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-23 07:40:16.756][support-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=support-microservice, profiles=[local], label=null, version=f6e7f5a3f5e17a018a13c4b3d6ee60e39c08e541, state=null
+[INFO][][2021-08-23 07:40:16.757][support-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/support-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:40:16.849][support-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-23 07:40:17.747][support-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-23 07:40:18.189][support-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=bd42288e-cac4-30c9-9afc-400d0072f179
+[INFO][][2021-08-23 07:40:18.460][support-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$a2436d01] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-23 07:40:18.824][support-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3347 (http)
+[INFO][][2021-08-23 07:40:18.853][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-23 07:40:18.854][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-23 07:40:18.996][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-23 07:40:18.997][support-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 2133 ms
+[WARN][][2021-08-23 07:40:19.165][support-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 07:40:19.165][support-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 07:40:19.178][support-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@9e50283
+[INFO][][2021-08-23 07:40:20.678][support-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: 0bbabaec-e5e7-408d-9051-6321268a473a
+
+[INFO][][2021-08-23 07:40:20.798][support-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@31b91435, org.springframework.security.web.context.SecurityContextPersistenceFilter@14bf9fd0, org.springframework.security.web.header.HeaderWriterFilter@4177d422, org.springframework.security.web.authentication.logout.LogoutFilter@31c0c7e5, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@f837c11, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@18b58c77, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@4ba402b5, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@5d75f90e, org.springframework.security.web.session.SessionManagementFilter@29ee8174, org.springframework.security.web.access.ExceptionTranslationFilter@3ba1f56e, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@430212cb]
+[WARN][][2021-08-23 07:40:20.823][support-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 07:40:20.823][support-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 07:40:21.16][support-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 07:40:21.656][support-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-23 07:40:22.42][support-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-23 07:40:22.73][support-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-23 07:40:22.74][support-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-23 07:40:22.83][support-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629726022082 with initial instances count: 0
+[INFO][][2021-08-23 07:40:22.93][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application SUPPORT-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-23 07:40:22.131][support-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3347 (http) with context path '/support-microservice'
+[INFO][][2021-08-23 07:40:22.132][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3347
+[INFO][][2021-08-23 07:40:22.135][support-microservice][org.springframework.boot.StartupInfoLogger:59] - Started SupportMicroserviceApplication in 10.646 seconds (JVM running for 11.069)
+[INFO][][2021-08-23 07:40:44.270][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO][][2021-08-23 07:40:44.272][support-microservice][org.springframework.web.servlet.FrameworkServlet:524] - Initializing Servlet 'dispatcherServlet'
+[INFO][][2021-08-23 07:40:44.293][support-microservice][org.springframework.web.servlet.FrameworkServlet:546] - Completed initialization in 21 ms
+[INFO][][2021-08-23 07:40:44.423][support-microservice][net.occp.support.controller.SupportController:67] - Send mail
+[INFO][][2021-08-23 07:40:44.424][support-microservice][net.occp.support.service.impl.SupportService:53] - sendMail service started
+[INFO][][2021-08-23 07:40:44.425][support-microservice][net.occp.support.service.impl.SupportService:54] - cristian.archilac@gmail.com
+[ERROR][][2021-08-23 07:40:44.463][support-microservice][net.occp.support.service.impl.AuthorizationService:68] - Exception: {0}
+feign.RetryableException: Connection refused (Connection refused) executing POST http://localhost:3341/auth-microservice/auth/login
+	at feign.FeignException.errorExecuting(FeignException.java:84)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:113)
+	at feign.SynchronousMethodHandler.invoke(SynchronousMethodHandler.java:78)
+	at feign.ReflectiveFeign$FeignInvocationHandler.invoke(ReflectiveFeign.java:103)
+	at com.sun.proxy.$Proxy143.loginForToken(Unknown Source)
+	at net.occp.support.service.impl.AuthorizationService.getSessionToken(AuthorizationService.java:64)
+	at net.occp.support.service.impl.SupportService.sendMail(SupportService.java:58)
+	at net.occp.support.controller.SupportController.sendEmail(SupportController.java:69)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:190)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:138)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:892)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1039)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:942)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1005)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:908)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:882)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.web.trace.servlet.HttpTraceFilter.doFilterInternal(HttpTraceFilter.java:90)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:320)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.invoke(FilterSecurityInterceptor.java:127)
+	at org.springframework.security.web.access.intercept.FilterSecurityInterceptor.doFilter(FilterSecurityInterceptor.java:91)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:119)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.session.SessionManagementFilter.doFilter(SessionManagementFilter.java:137)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:111)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:170)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.www.BasicAuthenticationFilter.doFilterInternal(BasicAuthenticationFilter.java:158)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:74)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.SecurityContextPersistenceFilter.doFilter(SecurityContextPersistenceFilter.java:105)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:56)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:334)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:215)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:178)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:357)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:270)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:99)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:92)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.HiddenHttpMethodFilter.doFilterInternal(HiddenHttpMethodFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.cloud.sleuth.instrument.web.ExceptionLoggingFilter.doFilter(ExceptionLoggingFilter.java:50)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at brave.servlet.TracingFilter.doFilter(TracingFilter.java:86)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.filterAndRecordMetrics(WebMvcMetricsFilter.java:117)
+	at org.springframework.boot.actuate.metrics.web.servlet.WebMvcMetricsFilter.doFilterInternal(WebMvcMetricsFilter.java:106)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:200)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:107)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:200)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:490)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:408)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:66)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:836)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1747)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.net.ConnectException: Connection refused (Connection refused)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1187)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream0(HttpURLConnection.java:1367)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getOutputStream(HttpURLConnection.java:1342)
+	at feign.Client$Default.convertAndSend(Client.java:124)
+	at feign.Client$Default.execute(Client.java:67)
+	at org.springframework.cloud.sleuth.instrument.web.client.feign.TracingFeignClient.execute(TracingFeignClient.java:100)
+	at org.springframework.cloud.sleuth.instrument.web.client.feign.LazyTracingFeignClient.execute(LazyTracingFeignClient.java:60)
+	at feign.SynchronousMethodHandler.executeAndDecode(SynchronousMethodHandler.java:108)
+	... 108 common frames omitted
+[INFO][][2021-08-23 07:40:44.465][support-microservice][net.occp.support.service.impl.SupportService:61] - Error Sending Data to Mail Microservice
+[WARN][][2021-08-23 07:40:44.468][support-microservice][net.occp.support.core.exception.ExceptionResourceAdvice:42] - [business exception] 500 : INTERNAL_ERROR, Error in the Auth microservice in: 
+[WARN][][2021-08-23 07:40:44.469][support-microservice][net.occp.support.core.exception.ExceptionResourceAdvice:45] - [line] net.occp.support.service.impl.AuthorizationService : 69
+[WARN][][2021-08-23 07:40:44.469][support-microservice][net.occp.support.core.exception.ExceptionResourceAdvice:45] - [line] net.occp.support.service.impl.SupportService : 58
+[WARN][][2021-08-23 07:40:44.470][support-microservice][net.occp.support.core.exception.ExceptionResourceAdvice:45] - [line] net.occp.support.controller.SupportController : 69
+[INFO][][2021-08-23 07:40:45.750][support-microservice][com.netflix.config.ChainedDynamicProperty$ChainLink:115] - Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO][][2021-08-23 07:40:45.783][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 07:40:45.784][support-microservice][com.netflix.loadbalancer.BaseLoadBalancer:197] - Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO][][2021-08-23 07:40:45.790][support-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222] - Using serverListUpdater PollingServerListUpdater
+[INFO][][2021-08-23 07:40:45.794][support-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150] - DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@15afb612
+[INFO][][2021-08-23 07:40:56.265][support-microservice][com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53] - Shutting down the Executor Pool for PollingServerListUpdater
+[INFO][][2021-08-23 07:40:56.266][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application SUPPORT-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-23 07:40:56.271][support-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 07:40:56.822][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 07:40:56.823][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:72] - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:244)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+[INFO][][2021-08-23 07:40:56.828][support-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-23 07:40:56.828][support-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:41:12.95][support-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7c2eb6fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:41:12.631][support-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:207] - Fetching config from server at : http://localhost:8888/config-server
+[INFO][][2021-08-23 07:41:13.728][support-microservice][org.springframework.cloud.config.client.ConfigServicePropertySourceLocator:151] - Located environment: name=support-microservice, profiles=[local], label=null, version=f6e7f5a3f5e17a018a13c4b3d6ee60e39c08e541, state=null
+[INFO][][2021-08-23 07:41:13.729][support-microservice][org.springframework.cloud.bootstrap.config.PropertySourceBootstrapConfiguration:101] - Located property source: CompositePropertySource {name='configService', propertySources=[MapPropertySource {name='configClient'}, MapPropertySource {name='git@github.com:T2MC/sccfg.git/support-microservice-local.yml'}]}
+#logback.classic pattern: [%-4p][%X{x-pid}][%d{yyyy-MM-dd HH:mm:ss.SS}][support-microservice][%C:%L] - %m%n
+[INFO][][2021-08-23 07:41:13.834][support-microservice][org.springframework.boot.SpringApplication:679] - The following profiles are active: local
+[WARN][][2021-08-23 07:41:14.685][support-microservice][org.springframework.boot.actuate.endpoint.EndpointId:135] - Endpoint ID 'service-registry' contains invalid characters, please migrate to a valid format.
+[INFO][][2021-08-23 07:41:15.77][support-microservice][org.springframework.cloud.context.scope.GenericScope:295] - BeanFactory id=bd42288e-cac4-30c9-9afc-400d0072f179
+[INFO][][2021-08-23 07:41:15.330][support-microservice][org.springframework.context.support.PostProcessorRegistrationDelegate$BeanPostProcessorChecker:330] - Bean 'org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration' of type [org.springframework.cloud.autoconfigure.ConfigurationPropertiesRebinderAutoConfiguration$$EnhancerBySpringCGLIB$$7c2eb6fb] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+[INFO][][2021-08-23 07:41:15.667][support-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:90] - Tomcat initialized with port(s): 3347 (http)
+[INFO][][2021-08-23 07:41:15.695][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting service [Tomcat]
+[INFO][][2021-08-23 07:41:15.696][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Starting Servlet engine: [Apache Tomcat/9.0.19]
+[INFO][][2021-08-23 07:41:15.851][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring embedded WebApplicationContext
+[INFO][][2021-08-23 07:41:15.851][support-microservice][org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext:296] - Root WebApplicationContext: initialization completed in 2002 ms
+[WARN][][2021-08-23 07:41:16.13][support-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 07:41:16.13][support-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 07:41:16.26][support-microservice][com.netflix.config.DynamicPropertyFactory:281] - DynamicPropertyFactory is initialized with configuration sources: com.netflix.config.ConcurrentCompositeConfiguration@280d5a82
+[INFO][][2021-08-23 07:41:17.559][support-microservice][org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration:87] - 
+
+Using generated security password: 0c3875fb-92ef-4462-a6e9-de32736fd483
+
+[INFO][][2021-08-23 07:41:17.664][support-microservice][org.springframework.security.web.DefaultSecurityFilterChain:43] - Creating filter chain: any request, [org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@117069f2, org.springframework.security.web.context.SecurityContextPersistenceFilter@624494d4, org.springframework.security.web.header.HeaderWriterFilter@44948ac6, org.springframework.security.web.authentication.logout.LogoutFilter@4e0802e0, org.springframework.security.web.authentication.www.BasicAuthenticationFilter@62f6185a, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@34cfdd84, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@73dd0f23, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@77ebc9e6, org.springframework.security.web.session.SessionManagementFilter@3b839f68, org.springframework.security.web.access.ExceptionTranslationFilter@2d34866a, org.springframework.security.web.access.intercept.FilterSecurityInterceptor@58a7ca42]
+[WARN][][2021-08-23 07:41:17.685][support-microservice][com.netflix.config.sources.URLConfigurationSource:121] - No URLs will be polled as dynamic configuration sources.
+[INFO][][2021-08-23 07:41:17.685][support-microservice][com.netflix.config.sources.URLConfigurationSource:122] - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+[INFO][][2021-08-23 07:41:17.857][support-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:171] - Initializing ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 07:41:18.459][support-microservice][org.springframework.boot.actuate.endpoint.web.EndpointLinksResolver:59] - Exposing 2 endpoint(s) beneath base path '/actuator'
+[INFO][][2021-08-23 07:41:18.854][support-microservice][org.springframework.cloud.netflix.eureka.InstanceInfoFactory:72] - Setting initial instance status as: STARTING
+[INFO][][2021-08-23 07:41:18.888][support-microservice][com.netflix.discovery.DiscoveryClient:349] - Initializing Eureka in region us-east-1
+[INFO][][2021-08-23 07:41:18.890][support-microservice][com.netflix.discovery.DiscoveryClient:352] - Client configured to neither register nor query for data.
+[INFO][][2021-08-23 07:41:18.899][support-microservice][com.netflix.discovery.DiscoveryClient:365] - Discovery Client initialized at timestamp 1629726078898 with initial instances count: 0
+[INFO][][2021-08-23 07:41:18.909][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:41] - Registering application SUPPORT-MICROSERVICE with eureka with status UP
+[INFO][][2021-08-23 07:41:18.951][support-microservice][org.springframework.boot.web.embedded.tomcat.TomcatWebServer:204] - Tomcat started on port(s): 3347 (http) with context path '/support-microservice'
+[INFO][][2021-08-23 07:41:18.952][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaAutoServiceRegistration:143] - Updating port to 3347
+[INFO][][2021-08-23 07:41:18.955][support-microservice][org.springframework.boot.StartupInfoLogger:59] - Started SupportMicroserviceApplication in 7.92 seconds (JVM running for 8.352)
+[INFO][][2021-08-23 07:41:50.489][support-microservice][org.apache.juli.logging.DirectJDKLog:173] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+[INFO][][2021-08-23 07:41:50.490][support-microservice][org.springframework.web.servlet.FrameworkServlet:524] - Initializing Servlet 'dispatcherServlet'
+[INFO][][2021-08-23 07:41:50.506][support-microservice][org.springframework.web.servlet.FrameworkServlet:546] - Completed initialization in 16 ms
+[INFO][][2021-08-23 07:41:50.631][support-microservice][net.occp.support.controller.SupportController:67] - Send mail
+[INFO][][2021-08-23 07:41:50.632][support-microservice][net.occp.support.service.impl.SupportService:53] - sendMail service started
+[INFO][][2021-08-23 07:41:50.633][support-microservice][net.occp.support.service.impl.SupportService:54] - cristian.archilac@gmail.com
+[INFO][][2021-08-23 07:41:54.132][support-microservice][net.occp.support.service.impl.SupportService:59] - Email sent to: cristian.archilac@gmail.com
+[INFO][][2021-08-23 07:41:54.615][support-microservice][com.netflix.config.ChainedDynamicProperty$ChainLink:115] - Flipping property: localhost.ribbon.ActiveConnectionsLimit to use NEXT property: niws.loadbalancer.availabilityFilteringRule.activeConnectionsLimit = 2147483647
+[INFO][][2021-08-23 07:41:54.649][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:58] - Shutdown hook installed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 07:41:54.650][support-microservice][com.netflix.loadbalancer.BaseLoadBalancer:197] - Client: localhost instantiated a LoadBalancer: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:null
+[INFO][][2021-08-23 07:41:54.657][support-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:222] - Using serverListUpdater PollingServerListUpdater
+[INFO][][2021-08-23 07:41:54.661][support-microservice][com.netflix.loadbalancer.DynamicServerListLoadBalancer:150] - DynamicServerListLoadBalancer for client localhost initialized: DynamicServerListLoadBalancer:{NFLoadBalancer:name=localhost,current list of Servers=[],Load balancer stats=Zone stats: {},Server stats: []}ServerList:org.springframework.cloud.netflix.ribbon.eureka.DomainExtractingServerList@61981b0a
+[INFO][][2021-08-23 07:50:10.905][support-microservice][com.netflix.loadbalancer.PollingServerListUpdater$LazyHolder$2:53] - Shutting down the Executor Pool for PollingServerListUpdater
+[INFO][][2021-08-23 07:50:10.907][support-microservice][org.springframework.cloud.netflix.eureka.serviceregistry.EurekaServiceRegistry:65] - Unregistering application SUPPORT-MICROSERVICE with eureka with status DOWN
+[INFO][][2021-08-23 07:50:10.913][support-microservice][org.springframework.scheduling.concurrent.ExecutorConfigurationSupport:208] - Shutting down ExecutorService 'applicationTaskExecutor'
+[INFO][][2021-08-23 07:50:11.884][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:67] - Shutdown hook removed for: NFLoadBalancer-PingTimer-localhost
+[INFO][][2021-08-23 07:50:11.902][support-microservice][com.netflix.util.concurrent.ShutdownEnabledTimer:72] - Exception caught (might be ok if at shutdown)
+java.lang.IllegalStateException: Shutdown in progress
+	at java.base/java.lang.ApplicationShutdownHooks.remove(ApplicationShutdownHooks.java:82)
+	at java.base/java.lang.Runtime.removeShutdownHook(Runtime.java:244)
+	at com.netflix.util.concurrent.ShutdownEnabledTimer.cancel(ShutdownEnabledTimer.java:70)
+	at com.netflix.loadbalancer.BaseLoadBalancer.cancelPingTask(BaseLoadBalancer.java:632)
+	at com.netflix.loadbalancer.BaseLoadBalancer.shutdown(BaseLoadBalancer.java:883)
+	at com.netflix.loadbalancer.DynamicServerListLoadBalancer.shutdown(DynamicServerListLoadBalancer.java:285)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.invokeCustomDestroyMethod(DisposableBeanAdapter.java:337)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:271)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext.close(AbstractApplicationContext.java:975)
+	at org.springframework.cloud.context.named.NamedContextFactory.destroy(NamedContextFactory.java:92)
+	at org.springframework.beans.factory.support.DisposableBeanAdapter.destroy(DisposableBeanAdapter.java:256)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroyBean(DefaultSingletonBeanRegistry.java:571)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingleton(DefaultSingletonBeanRegistry.java:543)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingleton(DefaultListableBeanFactory.java:1034)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.destroySingletons(DefaultSingletonBeanRegistry.java:504)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.destroySingletons(DefaultListableBeanFactory.java:1027)
+	at org.springframework.context.support.AbstractApplicationContext.destroyBeans(AbstractApplicationContext.java:1057)
+	at org.springframework.context.support.AbstractApplicationContext.doClose(AbstractApplicationContext.java:1026)
+	at org.springframework.context.support.AbstractApplicationContext$1.run(AbstractApplicationContext.java:945)
+[INFO][][2021-08-23 07:50:11.908][support-microservice][com.netflix.discovery.DiscoveryClient:888] - Shutting down DiscoveryClient ...
+[INFO][][2021-08-23 07:50:11.908][support-microservice][com.netflix.discovery.DiscoveryClient:911] - Completed shut down of DiscoveryClient
